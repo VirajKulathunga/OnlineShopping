@@ -1,0 +1,32 @@
+<HTML>
+<head>
+<script LANGUAGE="JAVASCRIPT">
+function add()
+{
+		location.replace("product_add.jsp");
+}
+function dele()
+{
+		location.replace("del_prod.jsp");
+}
+function update()
+{
+		location.replace("prod_update.jsp");
+}
+</script>
+</head>
+<BODY BGCOLOR="#FFCC00">
+<center>
+<h1> <I> Product Administration </I></h1><BR>
+Please press Respective Button for Specific operation you want to do <BR></center>
+<PRE>
+			<INPUT TYPE="button" name="add" value="Add" onClick="add()">  <BR>
+			<INPUT TYPE="button" name="del" value="Delete" onClick="dele()"> <BR>
+			<INPUT TYPE="button" name="update" value="Update" onClick="update()"> <BR>
+</PRE>		
+
+<center>
+<A HREF="adm.html"> Click here to go back to Administration.</A>
+</center>
+</BODY>
+</HTML>

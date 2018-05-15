@@ -1,0 +1,167 @@
+<web-app>
+	<servlet>
+		<servlet-name>passcheck</servlet-name>
+		<servlet-class>PassCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>passcheck</servlet-name>
+		<url-pattern>/passcheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>change</servlet-name>
+		<servlet-class>ChangePass</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>change</servlet-name>
+		<url-pattern>/changepass</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ins_prod</servlet-name>
+		<servlet-class>Ins_prd_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ins_prod</servlet-name>
+		<url-pattern>/ins_prd_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>del_prod</servlet-name>
+		<servlet-class>del_prd_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>del_prod</servlet-name>
+		<url-pattern>/del_prd_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>del_vendor</servlet-name>
+		<servlet-class>del_vendor_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>del_vendor</servlet-name>
+		<url-pattern>/Del_vendor_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>update</servlet-name>
+		<servlet-class>UpdateProd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>update</servlet-name>
+		<url-pattern>/Updatprod</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>vendor</servlet-name>
+		<servlet-class>Ins_vend_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vendor</servlet-name>
+		<url-pattern>/ins_vend_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>vendorUpdate</servlet-name>
+		<servlet-class>Update_vend_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vendorUpdate</servlet-name>
+		<url-pattern>/update_vend_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>login_check</servlet-name>
+		<servlet-class>LoginCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login_check</servlet-name>
+		<url-pattern>/logincheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>register</servlet-name>
+		<servlet-class>Registration</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/registration</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>custdel</servlet-name>
+		<servlet-class>Cust_del_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>custdel</servlet-name>
+		<url-pattern>/cust_del_db_srv</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>inscat</servlet-name>
+		<servlet-class>Ins_cat_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>inscat</servlet-name>
+		<url-pattern>/ins_cat_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>insdis</servlet-name>
+		<servlet-class>Ins_dis_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>insdis</servlet-name>
+		<url-pattern>/ins_dis_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>catupda</servlet-name>
+		<servlet-class>Update_cat_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>catupda</servlet-name>
+		<url-pattern>/update_cat_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>disupdate</servlet-name>
+		<servlet-class>update_dis_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>disupdate</servlet-name>
+		<url-pattern>/Update_dis_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>catdel</servlet-name>
+		<servlet-class>Del_cat_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>catdel</servlet-name>
+		<url-pattern>/del_cat_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deldis</servlet-name>
+		<servlet-class>Del_dis_db_srv</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deldis</servlet-name>
+		<url-pattern>/del_dis_db_srv</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>home_page.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>rep</servlet-name>
+		<servlet-class>reports</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>rep</servlet-name>
+		<url-pattern>/report</url-pattern>
+	</servlet-mapping>
+
+</web-app>

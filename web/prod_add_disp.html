@@ -1,0 +1,56 @@
+<HTML>
+<BODY BGCOLOR="#FFCCAA">
+<BR><BR><BR>
+<center>
+<U> <h3> Add a New Product </h3> </U>
+ <BR><BR><BR>
+ <FORM name="f" method="POST" action="ins_prd_db_srv">
+<TABLE>
+<TR>
+	<TD>Product Code : </TD> 
+	<TD> <INPUT TYPE="text" NAME="t1"> 	</TD> 
+	<TD>Product Name : </TD> 
+	<TD> <INPUT TYPE="text" NAME="t2"> 	</TD>
+</TR>
+<TR>
+	<TD> Category Code : </TD> <TD> <SELECT NAME="cat_cod"> 
+									<option value=a1> APLG
+									<option value=a2> APLSU
+									<option value=a3> APLSY
+									<option value=a4> APLV 
+									</SELECT> 
+							  </TD>
+	<TD> Vendor  Code : </TD> <TD> <SELECT NAME="Vendor_Code"> 
+									<option value=a5> APL
+									<option value=a6> APLS
+									<option value=a7> APLR
+									<option value=a8> APLV
+									</SELECT> 
+							  </TD>
+
+</tr>
+<TR>
+	<TD>Unit Cost($) : </TD> <TD> <INPUT TYPE="text" NAME="t3"></TD>
+	<TD>Description  : </td> <TD> <TEXTAREA NAME="desc" ROWS="2" COLS="17"></TEXTAREA></TD>
+</TR>
+<TR>
+	<TD>Tax (%) : </TD> <TD> <INPUT TYPE="text" NAME="t4"></TD>
+</TR>
+<TR>
+	<TD>Min_Quantity : </TD> <TD> <INPUT TYPE="text" NAME="t5"></TD>
+</TR>
+<TR>
+	<TD>Product Description : </TD> <TD> <TEXTAREA NAME="pd" ROWS="2" COLS="16"> </TEXTAREA></TD>
+	<!-- <TD>Discount Struction  : </TD> <TD> <TEXTAREA NAME="dis" ROWS="2" COLS="16"> </TEXTAREA></TD> --> 
+      <TD>Discount : </TD> <TD> <INPUT TYPE="text" NAME="dis"></TD>
+</TR>
+</TABLE> <BR>
+<CENTER> 
+	<INPUT TYPE="submit" VALUE="Submit" NAME=SUBMIT> <BR> <BR>
+</FORM>
+	Click to go back to Product Administration <a
+	href="product_administration.html">back</a> <BR> <BR>
+	Click to go back to Administration <a href="adm.html">back</a> 
+</CENTER>
+</BODY>
+</HTML>

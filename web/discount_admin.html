@@ -1,0 +1,33 @@
+<HTML>
+<head>
+<script LANGUAGE="JAVASCRIPT">
+function add()
+{
+		location.replace("discount_add.jsp");
+}
+function dele()
+{
+		location.replace("del_discount.jsp");
+}
+function update()
+{
+		location.replace("discount_update.jsp");
+}
+</script>
+</head>
+<BODY BGCOLOR="#abcdef">
+<center>
+<h1> <I> Discount Administration </I></h1><BR>
+Please press Respective Button for Specific operation you want to do <BR></center>
+<PRE>
+			<INPUT TYPE="button" name="add" value="Add" onClick="add()">  <BR>
+			<INPUT TYPE="button" name="del" value="Delete" onClick="dele()"> <BR>
+			<INPUT TYPE="button" name="update" value="Update" onClick="update()"> <BR>
+</PRE>		
+
+<center>
+ <BR>
+	<A HREF="adm.html">Click to go back to Administration</A>
+</center>
+</BODY>
+</HTML>

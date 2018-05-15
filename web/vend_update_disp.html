@@ -1,0 +1,50 @@
+<HTML>
+<BODY BGCOLOR="#FFCCAA">
+<FORM METHOD=POST ACTION="update_vend_db_srv">
+<BR><BR><BR>
+<center>
+<U> <h3> Update a New Vendor </h3> </U>
+ <BR><BR>
+<TABLE>
+<TR>
+	<TD>Vendor Code : </TD> 
+	<TD> <INPUT TYPE="text" NAME="t1"> 	</TD> 
+</tr> <BR>
+<tr>
+	<TD>Vendor Name : </TD> 
+	<TD> <INPUT TYPE="text" NAME="t2"> 	</TD>
+</TR><BR>
+<TR>
+	<TD>Address   : </TD> <TD> <TEXTAREA NAME="t3" ROWS="2" COLS="16"> </TEXTAREA></TD>
+</TR>
+</TABLE> <BR>
+<CENTER> 
+	<INPUT TYPE="submit" VALUE="Submit"> <BR> <BR>
+	<A HREF="vendor_adm_screen.html">Click to go back to Vendor Administration </A><BR> <BR>
+	<A HREF="admin_screen.html">Click to go back to Administration</A>
+</CENTER>
+
+<script>
+
+        var data=unescape(location.search.substring(1));
+        data=data.split("+");
+        var temp="";
+        var mytt="";
+        var strd=new Array();
+        for(i=0;i<data.length;i++)temp+=data[i]+" ";
+        temp=temp.split("&");
+        for(j=0;j<temp.length;j++)
+        strd[strd.length]=new Array(temp[j].split("=")[0],temp[j].split("=")[1]);
+        var df=document.forms[0];
+   try {
+        for(i=0;i<df.elements.length;i++) {
+        df.elements[i].value=strd[i][1];
+        mytt+=strd[i][1]+"\n";}
+        } catch(e) {// status=e.description+"          "+e.constructor() 
+                   }
+</script>
+
+
+</FORM>
+</BODY>
+</HTML>

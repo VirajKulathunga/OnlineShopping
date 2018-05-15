@@ -1,0 +1,68 @@
+<body bgcolor=ivory scroll=no>
+<LINK HREF="switch.xsl" rel="stylesheet">
+<script>
+document.oncontextmenu=new Function("return false");
+document.onselectstart=new Function("return false");
+var persistmenu="yes" 
+var persisttype="sitewide"
+if (document.getElementById){ 
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+function getLoad() {
+var anc=document.getElementsByTagName("A");
+ for(an=0;an<anc.length;an++) {
+ anc[an].onmouseover=function() {status=this.innerHTML;return true;}
+ anc[an].onmouseout=function() {status="Done";return true;}
+ anc[an].onfocus=function() {status=this.innerHTML;this.blur();return true;}
+ anc[an].oncontextmenu=function() {
+                             var cfm=confirm("Would u like to open this link in New Window");
+                             if(cfm) open(this.href);
+                             else return;
+                                  }
+}
+}
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); 		if(el.style.display != "block"){ 
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") 
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+function getReports(url) {
+var mw=screen.availWidth-50;
+var mh=screen.availHeight-50;
+open(url,"reportss","scrollbars,width="+mw+",height="+mh+",left=20,top=20,maximize=yes");
+}
+</script>	
+<div id="masterdiv">	
+	<div class="menutitle" onclick="SwitchMenu('sub1')">Administration</div>
+	<span class="submenu" id="sub1">
+		<font face=webdings color=lightslategray>4</font><a href="product_administration.html"" target="right">Products Admin </a><br>
+		<font face=webdings color=lightslategray>4</font><a href="cust_admin.html" target="right">Customers Admin</a><br>
+		<font face=webdings color=lightslategray>4</font><a href="vendor_adm_screen.html" target="right">Vendors Admin </a><br>
+		<font face=webdings color=lightslategray>4</font><a href="cat_admin.html" target="right"> Category Admin </a><BR>
+		<font face=webdings color=lightslategray>4</font><a href="discount_admin.html"  target="right"> Discount Admin </a><br>
+		<font face=webdings color=lightslategray>4</font><a href="stock1.html" target="right"> Stock  Admin</a>
+	</span>
+
+	<br>
+	<div class="menutitle" onclick="SwitchMenu('sub3')">Reports Terminal</div>
+	<span class="submenu" id="sub3">
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=PRODUCT')">Prod Details Rep</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=ORDER')">Order Details Rep</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=CATEGORY')">Cate Details Rep</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=DISCOUNT')">Dis Details Rep</a><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=VENDOR')">Ven Details Rep</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=REGISTRATION')">Regi Details Rep</a>
+	</span>
+</div><script>getLoad()</script>
+

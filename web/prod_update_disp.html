@@ -1,0 +1,75 @@
+<HTML>
+<BODY BGCOLOR="#FFCCAA">
+<BR><BR><BR>
+<center>
+<U> <h3> Update a New Product </h3> </U>
+ <BR><BR><BR>
+ <FORM name="f" method="post" action="Updatprod">
+<TABLE>
+<TR>
+	<TD>Product Code : </TD> 
+	<TD> <INPUT TYPE="text" NAME="t1"> 	</TD> 
+	<TD>Product Name : </TD> 
+	<TD> <INPUT TYPE="text" NAME="t2"> 	</TD>
+</TR>
+<TR>
+	<TD> Category Code : </TD> <TD> <SELECT NAME="cat_cod"> 
+									<option value=a1> APLG
+									<option value=a2> APLSU
+									<option value=a3> APLSY
+									<option value=a4> APLV 
+									</SELECT> 
+							  </TD>
+	<TD> Vendor  Code : </TD> <TD> <SELECT NAME="Vendor_Code"> 
+									<option value=a5> APL
+									<option value=a6> APLS
+									<option value=a7> APLR
+									<option value=a8> APLV
+									</SELECT> 
+							  </TD>
+
+</tr>
+<TR>
+	<TD>Unit Cost($) : </TD> <TD> <INPUT TYPE="text" NAME="t3"></TD>
+	<TD>Description  : </td> <TD> <TEXTAREA NAME="" ROWS="2" COLS="17"></TEXTAREA></TD>
+</TR>
+<TR>
+	<TD>Tax (%) : </TD> <TD> <INPUT TYPE="text" NAME="t4"></TD>
+</TR>
+<TR>
+	<TD>Min_Quantity : </TD> <TD> <INPUT TYPE="text" NAME="t5"></TD>
+</TR>
+<TR>
+	<TD>Product Description : </TD> <TD> <TEXTAREA NAME="pd" ROWS="2" COLS="16"> </TEXTAREA></TD>
+	<TD>Discount Struction  : </TD> <TD> <TEXTAREA NAME="dis" ROWS="2" COLS="16"> </TEXTAREA></TD>
+</TR>
+</TABLE> <BR>
+<CENTER> 
+	<INPUT TYPE="submit" VALUE="Submit"> <BR> <BR>
+</FORM>
+	Click to go back to Product Administration <a
+	href="product_administration.html">back</a> <BR> <BR>
+	Click to go back to Administration <a href="admin_screen.html">back</a> 
+</CENTER>
+<script>
+
+        var data=unescape(location.search.substring(1));
+        data=data.split("+");
+        var temp="";
+        var mytt="";
+        var strd=new Array();
+        for(i=0;i<data.length;i++)temp+=data[i]+" ";
+        temp=temp.split("&");
+        for(j=0;j<temp.length;j++)
+        strd[strd.length]=new Array(temp[j].split("=")[0],temp[j].split("=")[1]);
+        var df=document.forms[0];
+   try {
+        for(i=0;i<df.elements.length;i++) {
+        df.elements[i].value=strd[i][1];
+        mytt+=strd[i][1]+"\n";}
+        } catch(e) {// status=e.description+"          "+e.constructor() 
+                   }
+</script>
+
+</BODY>
+</HTML>

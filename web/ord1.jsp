@@ -59,17 +59,22 @@
 		       	{
 		                if(ordqty>minqtyord)
 			            { 
-		                  String cmd2="INSERT INTO order VALUES(?,?,?,?,?,?,?,?)";
-                       	  st=con.prepareStatement(cmd2);
-	                      st.setString(1,custid);
-		                  st.setString(2,prodcode);
-		                  st.setInt(3,ordqty);
-		                  st.setFloat(4,unitcost);
-		                  st.setFloat(5,netcostt);
-		                  st.setString(6,orddate);
-		                  st.setString(7,pmtmode);
-                                  st.setString(8,ccno);
-		                  st.executeUpdate();
+//		                  String cmd2="INSERT INTO order VALUES(?,?,?,?,?,?,?,?)";
+//                       	  st=con.prepareStatement(cmd2);
+                                        
+		                  String cmd2="INSERT INTO `order` (`CUSTOMER_ID`,`PRODUCT_CODE`,`QUANTITY_ORDERED`,`UNIT_COST`,`NET_COST`,`ORDER_DATE`,`PAYMENT_MODE`,`cc_dd_cheque_no`) VALUES"
+                                          + "('"+custid+"','"+prodcode+"',"+ordqty+","+unitcost+","+netcostt+",'2018-05-18','"+pmtmode+"','')";
+                       	  sst=con.createStatement();
+                          sst.executeUpdate(cmd2);
+//	                      st.setString(1,custid);
+//		                  st.setString(2,prodcode);
+//		                  st.setInt(3,ordqty);
+//		                  st.setFloat(4,unitcost);
+//		                  st.setFloat(5,netcostt);
+//		                  st.setString(6,"2018-01-10");
+//		                  st.setString(7,pmtmode);
+//                                  st.setString(8,ccno);
+//		                  st.executeUpdate();
 		                  out.println("Your net cost is" +netcostt);
 		                  out.println("<BR><BR><h4>Your order is accepted</h4>");
 		                  out.println("<BR><BR><h5>Like to have another order...?</h5>"); 

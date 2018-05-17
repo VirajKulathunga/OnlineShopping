@@ -22,7 +22,7 @@ public class reports extends HttpServlet {
          try {
          String ds;
 		 int iv;
-         String data="Select * from "+vall;
+         String data="Select * from `"+vall+"`";
           Connection conn=null;
 		  Statement st=null;
 		  PreparedStatement pst=null;
